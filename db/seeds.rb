@@ -9,7 +9,7 @@ end
 end
 
 5.times do
-  category = Category.create(name: Faker::Lorem.word, article_id: rand(1..10))
+  category = Category.create(name: Faker::Lorem.word)
 end
 
 Article.all.each do |a|
