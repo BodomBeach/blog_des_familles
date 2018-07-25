@@ -4,8 +4,8 @@ Un blog ou chaque utilisateur peut poster des articles, commenter ou liker des a
 
 TO RUN, execute these 3 commands:
 * bundle install
-* rails db:seed
 * rails db:migrate
+* rails db:seed
 
 
 ruby 2.5.1
