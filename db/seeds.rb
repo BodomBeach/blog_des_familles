@@ -8,8 +8,6 @@
 
 require 'faker'
 
-cats = ["Politics", "Tech", "Sport", "Funny", "Nature"]
-
-cats.each do |cat|
-  category = Category.create(name: cat)
+15.times do
+  like = Like.create(user_id: rand(1..11), article_id: rand(1..11))
 end

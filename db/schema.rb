@@ -42,10 +42,11 @@ ActiveRecord::Schema.define(version: 2018_07_25_120552) do
   end
 
   create_table "likes", force: :cascade do |t|
-    t.boolean "state", default: false
     t.integer "user_id"
+    t.integer "article_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["article_id"], name: "index_likes_on_article_id"
     t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
