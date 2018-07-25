@@ -12,6 +12,10 @@ end
   category = Category.create(name: Faker::Lorem.word)
 end
 
+#L'étape suivante consiste à remplir la colonne category_id de la table articles
+#car au moment de la création des articles, category n'existait pas encore
+#on aurait aussi pu utiliser la méthode Article.new au lieu de create, puis
+#save plus tard.
 Article.all.each do |a|
   category = Category.all.sample
   a.category = category
